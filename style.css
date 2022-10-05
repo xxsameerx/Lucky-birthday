@@ -1,10 +1,9 @@
 :root {
-    --background-dark:#be185d;
     --black: #000;
   }
   
   html {
-    background-color: var(--background-dark);
+    background-color: violet;
     color: var(--black);
     height: 100%;
   }
@@ -15,65 +14,62 @@
   
   .header {
     text-align: center;
-    margin-top: 100px;
+    max-width: fit-content;
+    margin: auto;
+    margin-top:50px;
+    margin-bottom: 3rem;
+    border-bottom: 3px solid red;
+    background-color: yellow;
   }
   
   .container {
-    width: 300px;
-    margin: auto auto;
-  }
-  
-  label,
-  input {
-    display: block;
-    margin-top: 0.5rem;
-    width: 100%;
-  }
-  
-  label {
-    font-weight: 500;
-    font-size: 1.3rem;
-  }
-  
-  input {
-    border-radius: 5px;
-    padding: 0.5rem;
-    border: transparent;
+      border: 2px solid red;
+      text-align: center;
+      max-width: 30%;
+      width: 500px;
+      margin: auto;
+      color: red;
+      background-color: yellow;
+      margin-bottom: 3rem;
+    }
+  .input {
     font-size: large;
-    margin: 1rem 0;
+    display: block;
+    outline: #fff;
+    padding: 0.6rem 1rem;
+    margin: 1rem auto;
+    border: 2px solid red;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 325px;
   }
-  
+  .input-label {
+    display: block;
+    font-size: larger;
+    margin: 2rem 0px;
+    font-weight: 600;
+  }
+  .button{
+    border: 3.5px outset whitesmoke;
+    background-color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: .7rem 2rem;
+   
+    color: red;
+    
+    }
+    .button:hover{
+      background-color:red;
+      color: #fff;
+      border: 1.7px solid yellow;
+    }
+
   #calculate-number {
     margin: 0.5rem auto;
     display: block;
   }
-  
-  #calculate-number {
-    background-color: var(--background-dark);
-    border: 2px solid var(--black);
-    color: var(--black);
-    padding: 0.4rem 1rem;
-    border-radius: 0.5rem;
-    font-size: large;
-    cursor: pointer;
-    outline: var(--black);
-    margin: auto;
-    display: block;
-  }
-  
-  #output-container {
-    display: block;
-    margin: auto;
-    margin-top: 1rem;
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: x-large;
-    border-color: var(--black);
-    border-width: medium;
-    border-radius: 5px;
-  }
-  
+
   /* footer */
   
   footer {
@@ -97,6 +93,9 @@
   img,
   li {
     display: inline;
+    text-decoration: none;
+    color: red;
+    text-align: center;
   }
   
   img {
