@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/style.css" />
-    <title> MARK-11 project/birthday🚀</title>
-  </head>
-  <body>
-    <h1 class="header">Is Your Birthday Lucky? 🤔</h1>
-   <div class="container">
-     <main>
-    <label class="input-label "  for="date-of-birth">Date Of Birth:</label>
-    <input  class="input"  type="date" id="date-of-birth" />
-    <label class="input-label " for="lucky-number">Lucky Number:</label>
-    <input  class="input" type="number" id="lucky-number" placeholder="Enter a number" />
-    <p id="output-container"></p>
-  </main></div>
-  <button class="button" id="calculate-number">Check Number</button>
-    <footer>
-        <p>© | 2022 | SAMEERKART</p>
-        <ul class="footer-list">
-          <li>
-            <a class="links" href="https://github.com/xxsameerx">Github </a>
-             
-           
-          </li>
-          <li>
-            <a class="links" href="https://twitter.com/Xx_sameer_">Twitter</a>
-             
-            </a>
-          </li>
-  
-        <li >
-           <a
-              class="links"
-              href="https://www.linkedin.com/in/mohammad-sameer-abbas-763802243/">Linkedin</a>
-              
-      
-             
-            </a>
-          </li>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <title>Is ur Birthday Lucky?</title>
+</head>
+<body>
+
+    <div class="container-div">
+
+        <h1 class="heading">Is Your Birthday Lucky? </h1>
+        <label for="dob-input">Enter your Date of Birth:</label>
+        <input type="date" id="dob-input">
+        <label for="number-input">Enter your Lucky number:</label>
+        <input type="number" min="0" id="number-input">
+        <button id="check-btn">Check</button>
+        <p id="output-text"></p>
+
+    </div>
+
+    <footer class="footer">
+     <p> © | 2022 | SAMEERKART</p>
+        <ul>
+            <li class="list-item-inline">
+                <a class="social-link" href="https://github.com/xxsameerx" target="_blank">
+                    GitHub
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="social-link" href="https://www.linkedin.com/in/mohammad-sameer-abbas-763802243/" target="_blank">
+                    LinkedIn
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="social-link" href="https://twitter.com/Xx_sameer_" target="_blank">
+                    Twitter
+                </a>
+            </li>
         </ul>
-      </footer>
-    <script src="./main.js" type="text/javascript"></script>
-  </body>
+    </footer>
+
+    <script src="/main.js" type="text/javascript"></script>
+</body>
 </html>

@@ -1,36 +1,42 @@
-const dateOfBirth = document.querySelector("#date-of-birth");
-const luckyNumber = document.querySelector("#lucky-number");
-const checkButton = document.querySelector("#calculate-number");
-const displayMessage = document.querySelector("#output-container");
+const dobInput = document.querySelector("#dob-input");
+const numberInput = document.querySelector("#number-input");
+const checkBtn = document.querySelector("#check-btn");
+const outputText = document.querySelector("#output-text");
 
-const calculateSum = (date) => {
-  let sum = 0;
-  date = date.replaceAll("-", "");
-  for (let digit of date) {
-    sum = sum + Number(digit);
+function compareValues(sum,luckyNumber){
+    if(sum%luckyNumber===0){
+        outputText.innerText="Your birthday is lucky 🚀";
+    }else {
+        outputText.innerText="Your birthday is not lucky 🤒";
+    }
   }
-  return sum;
-};
 
-const checkIsNumberLucky = (sumOfDate, numberToCheck) => {
-  console.log(sumOfDate, numberToCheck);
-  if (sumOfDate % numberToCheck === 0) {
-    return showMessage(`${numberToCheck} is a lucky number!! 🥳 🥳 🥳 `);
-  }
-  showMessage(`${numberToCheck} is not that lucky 😕`);
-};
+  function calculateSum(dob) {
+    dob = dob.replaceAll("-","");
+    
+    let sum = 0;
 
-const showMessage = (message) => {
-  displayMessage.innerText = message;
-};
+    for(let i = 0; i < dob.length; i++) {
+        sum = sum + Number(dob.charAt(i));
+    }
 
-checkButton.addEventListener("click", () => {
-  const date = dateOfBirth.value;
-  const numberToCheck = luckyNumber.value;
-  if (date && numberToCheck) {
-    const sumOfDate = calculateSum(date);
-    checkIsNumberLucky(sumOfDate, numberToCheck);
-  } else {
-    showMessage("Please enter both the fields");
-  }
-});
+    return sum;
+}
+
+function checkIfBirthdayIsLucky() {
+    const dob = dobInput.value;
+    const sum = calculateSum(dob);
+
+    if(dob&&numberInput.value) {
+        if(numberInput.value < 0) {
+            outputText.innerText = "Please be positive & enter a positive number 😀"
+        } else {
+            compareValues(sum, numberInput.value);
+        }
+    }
+    else {
+        outputText.innerText = "Please enter both the fields 😡";
+    }
+}
+
+checkBtn.addEventListener("click", checkIfBirthdayIsLucky)
