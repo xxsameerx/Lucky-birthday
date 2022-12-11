@@ -29,7 +29,7 @@ function checkIfBirthdayIsLucky() {
 
     if(dob&&numberInput.value) {
         if(numberInput.value <= 0) {
-            outputText.innerText = "Please be positive & enter a positive number 😀"
+            outputText.innerText = "Please be positive & enter number greater than zero 😀"
         } else {
             compareValues(sum, numberInput.value);
         }
